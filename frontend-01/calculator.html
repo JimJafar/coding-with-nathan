@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <a href="index.html">Home</a>
+
+    <h1>A calculator</h1>
+    <table>
+        <tr>
+            <td colspan="2"><input type="number" id="input1" /></td>
+            <td colspan="2"><input type="number" id="input2" /></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="add()">+</button></td>
+            <td><!-- subtract button --></td>
+            <td><!-- multiply button --></td>
+            <td><!-- divide button --></td>
+        </tr>
+        <tr>
+            <td colspan="4"><span id="output"></span></td>
+        </tr>
+    </table>
+
+    <script>
+        // the special document variable has another function called getElementById
+        // which will find an element in the HTML by its id property
+        // in this case, we're getting an input element with the id of 'input1'
+        const input1 = document.getElementById('input1');
+        const input2 = document.getElementById('input2');
+        const output = document.getElementById('output');
+        
+        function add() {
+            // input elements have a value property that represents the current contents of the input
+            // an integer is a whole number like 1, 23 or 100 (not a decimal like 1.5, 23.4 or 100.0)
+            // parseInt is a function that will convert a string into an integer
+            // so I'm taking the value of the first input which is a string and converting it to an integer so I can add it
+            const added = parseInt(input1.value) + parseInt(input2.value);
+            // next I call the writeOutput function and pass in the result of adding the two numbers
+            writeOutput(added);
+        }
+        function writeOutput(content) {
+            // the innerHTML property of an element represents the HTML inside that element
+            // so I'm setting the innerHTML of the output element to the content that was passed in
+            output.innerHTML = content;
+        }
+    </script>
+</body>
+</html>

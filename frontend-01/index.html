@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <script>
+        // this is a comment - it's to help you and other developers understand the code - the computer ignores it
+        /*
+            this is a multi-line comment
+            it's also to help you and other developers understand the code - the computer ignores it
+        */
+
+
+        // print something to the developer tools console
+        console.log('Hello World');
+
+        // declare a variable
+        // this is a string
+        let myName = 'Nathan';
+        console.log(myName);
+        myName = 'John';
+        console.log(myName);
+        console.log(typeof myName);
+        // this is a number
+        let myAge = 30;
+        console.log(myAge);
+        console.log(typeof myAge);
+
+        // this is a boolean
+        let isOld = false;
+        console.log(isOld);
+        console.log(typeof isOld);
+
+        // this is a readonly variable
+        const cannotChangeMe = 'I cannot be changed';
+        // this will throw an error:
+        // cannotChangeMe = 'I am trying to change you';
+
+        // this is an array
+        let myArrayOfNumbers = [1, 2, 3, 4, 5];
+        let myArrayOfStrings = ['a', 'b', 'c', 'd'];
+        console.log(myArrayOfNumbers);
+        console.log(myArrayOfStrings);
+        console.log(typeof myArrayOfNumbers);
+        console.log(myArrayOfStrings[1]); // 'b' because arrays start at 0
+
+        // this is a function
+        function logThings(thing) {
+            console.log(thing);
+        }
+        function doubleAndLog(number) {
+            console.log(number * 2);
+        }
+        function writeAListItem(content) {
+             // document is a special variable that represents the HTML document
+             // the document has a function called write that will write stuff into the HTML
+            document.write('<li>' + content + '</li>');
+        }
+        function addTwoNumbers(number1, number2) {
+            return number1 + number2;
+        }
+        logThings('Hello World');
+        doubleAndLog(5); // 10 because 5 * 2 = 10
+        // log to the console the result of calling addTwoNumbers with 5 and 10
+        console.log(addTwoNumbers(5, 10)); // 15 because 5 + 10 = 15
+
+        myArrayOfStrings.forEach(logThings);
+        myArrayOfNumbers.forEach(doubleAndLog);
+
+        // arrays have lots of built in functions like reverse
+        // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+        myArrayOfStrings.reverse();
+        console.log(myArrayOfStrings);
+
+        // you can even merge them (concat is short for concatenate)
+        // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+        let myMergedArray = myArrayOfNumbers.concat(myArrayOfStrings);
+        console.log(myMergedArray);
+
+        // there are many more built in functions for arrays:
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+    </script>
+    <!-- this is a HTML comment -->
+    <a href="calculator.html">Calculator</a>
+    <h1>A list of things</h1>
+    <ul>
+        <script>
+            myArrayOfNumbers.forEach(writeAListItem);
+            myArrayOfStrings.forEach(writeAListItem);
+        </script>
+    </ul>
+</body>
+</html>
