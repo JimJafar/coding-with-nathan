@@ -16,7 +16,9 @@
         <tr>
             <td><button type="button" onclick="add()">+</button></td>
             <td><!-- subtract button --></td>
+            <td><button type="button" onclick="minus()">-</button></td>
             <td><!-- multiply button --></td>
+            <td><button type="button" onclick="multiply()">*</button></td>
             <td><!-- divide button --></td>
         </tr>
         <tr>
@@ -41,6 +43,18 @@
             // next I call the writeOutput function and pass in the result of adding the two numbers
             writeOutput(added);
         }
+
+        function minus() {
+            const minus = parseInt(input1.value) - parseInt(input2.value);
+            writeOutput(minus);
+        }
+        {
+            function multiply() {
+                const multiply = parseInt(input1.value) * parseInt(input2.value);
+            writeOutput(multiply);
+            }
+        }
+        
         function writeOutput(content) {
             // the innerHTML property of an element represents the HTML inside that element
             // so I'm setting the innerHTML of the output element to the content that was passed in
