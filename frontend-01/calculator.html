@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <a href="index.html">Home</a>
+    <a href="control-flow.html">Control flow</a>
+    
 
     <h1>A calculator</h1>
     <table>
@@ -15,11 +18,9 @@
         </tr>
         <tr>
             <td><button type="button" onclick="add()">+</button></td>
-            <td><!-- subtract button --></td>
             <td><button type="button" onclick="minus()">-</button></td>
-            <td><!-- multiply button --></td>
             <td><button type="button" onclick="multiply()">*</button></td>
-            <td><!-- divide button --></td>
+            <td><button type="button" onclick="divide()">/</button></td>
         </tr>
         <tr>
             <td colspan="4"><span id="output"></span></td>
@@ -48,11 +49,15 @@
             const minus = parseInt(input1.value) - parseInt(input2.value);
             writeOutput(minus);
         }
-        {
-            function multiply() {
-                const multiply = parseInt(input1.value) * parseInt(input2.value);
+        
+        function multiply() {
+            const multiply = parseInt(input1.value) * parseInt(input2.value);
             writeOutput(multiply);
-            }
+        }
+        
+        function divide() {
+            const divide = parseInt(input1.value) / parseInt(input2.value);
+            writeOutput(divide);
         }
         
         function writeOutput(content) {

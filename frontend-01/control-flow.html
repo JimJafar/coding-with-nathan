@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <a href="calculator.html">Calculator</a>
+
+    <h1>Control flow</h1>
+
+    <input type="text" id="word" placeholder="Enter a word">
+    <button type="button" onclick="hasWordGotVowels();">Has that word got vowels?</button>
+    <h2>Output</h2>
+    <div id="output"></div>
+
+    <script>
+        // Control flow is the order in which the computer executes statements in a script
+        // functions are a type of control flow
+
+        // if else statements
+        function isnumberGreaterThanThree(number) {
+            if (number > 3) {
+                console.log(number + ' is greater than 3');
+            } else if (number < 3) {
+                console.log(number + ' is less than 3');
+            } else {
+                console.log(number + ' is exactly 3');
+            }
+        }
+        isnumberGreaterThanThree(4); // 'number is greater than 3'
+        isnumberGreaterThanThree(2); // 'number is less than 3'
+        isnumberGreaterThanThree(3); // 'number is exactly 3'
+        
+        // switch statements - generally you use these when you have a lot of finite values to check
+        function whoIsWorkingOnTuesday(person) {
+            let working;
+            switch (person) {
+                case 'Lauren':
+                    working = true;
+                    break;
+                case 'Nathan':
+                    working = false;
+                    break;
+                default:
+                    console.log(`I'm not sure when ${person} is working`);
+            }
+            return working;
+        }
+        console.log('is Lauren working on Tuesday?', whoIsWorkingOnTuesday('Lauren')); // true
+        console.log('is Nathan working on Tuesday?', whoIsWorkingOnTuesday('Nathan')); // false
+        console.log(whoIsWorkingOnTuesday('John')); // 'I'm not sure when John is working'
+
+        // for loops - we looked at a version of these already
+        // we looked at the .forEach method on arrays
+        // for loops are a more general way of looping through arrays - you don't often use this method nowadays - instead you use the .forEach method
+        const myArray = ['a', 'b', 'c', 'd'];
+        // in the for loop definition we have 3 parts:
+        // 1. the initialisation - this is where we declare a variable called i to track the loop iteration
+        // 2. the condition - keep going as long as i is less than the length of the array
+        // 3. increment i by 1
+        console.log('for loop');
+        for (let i = 0; i < myArray.length; i++) {
+            console.log(`i = ${i}, myArray[i] = ${myArray[i]}`);
+        }
+
+        // while loops - these are similar to for loops but instead of looping a set number of times, they loop while a condition is true
+        // you use this when you don't know when the condition will become false
+        let i = 0;
+        console.log('while loop');
+        while (i < myArray.length) {
+            console.log(`i = ${i}, myArray[i] = ${myArray[i]}`);
+            i++;
+        }
+
+        // Nathan's challenge:
+        // write this function so that when the user enters a word, it checks if the word has vowels and tells them something like
+        // "yes, that word has these vowels: a, e, o" or "no, that word doesn't have vowels"
+        function hasWordGotVowels() {
+            const word = document.getElementById('word').value;
+            const output = document.getElementById('output');
+            // hint: you can use the .includes method on strings to check if a string contains another string like: word.includes('a')
+            // hint: you can use the .split method on strings to split a string into an array like: word.split('')
+            output.innerHTML = 'Output should go here';
+        }
+    </script>
+</body>
+</html>

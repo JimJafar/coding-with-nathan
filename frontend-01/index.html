@@ -23,17 +23,28 @@
         myName = 'John';
         console.log(myName);
         console.log(typeof myName);
+
         // this is a number
         let myAge = 30;
         console.log(myAge);
         console.log(typeof myAge);
+        // numbers can be incremented like this:
+        myAge++;
+        console.log(myAge); // 31
+        // that was short hand for this:
+        myAge = myAge + 1;
+        // numbers can be decremented like this:
+        myAge--;
+        console.log(myAge); // 30
+        // that was short hand for this:
+        myAge = myAge - 1;
 
         // this is a boolean
         let isOld = false;
         console.log(isOld);
         console.log(typeof isOld);
 
-        // this is a readonly variable
+        // this is a readonly variable (const is short for constant)
         const cannotChangeMe = 'I cannot be changed';
         // this will throw an error:
         // cannotChangeMe = 'I am trying to change you';
@@ -96,6 +107,8 @@
     </script>
     <!-- this is a HTML comment -->
     <a href="calculator.html">Calculator</a>
+    <a href="control-flow.html">Control flow</a>
+    
     <h1>A list of things</h1>
     <ul>
         <script>
