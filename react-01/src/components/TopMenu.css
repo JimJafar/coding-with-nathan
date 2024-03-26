@@ -1,0 +1,19 @@
+.TopMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.MenuItem {
+    display: flex;
+    width: 80px;
+}
+
+.Link {
+    color: white;
+    text-decoration: none;
+}
