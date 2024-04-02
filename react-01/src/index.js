@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Root from "./routes/Root";
 import Esther from "./routes/Esther";
+import Exodus from "./routes/Exodus";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "esther",
     element: <Esther />,
+  },
+  {
+    path: "exodus",
+    element: <Exodus />,
   },
 ]);
 

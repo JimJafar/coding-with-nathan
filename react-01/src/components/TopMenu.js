@@ -14,6 +14,11 @@ export default function TopMenu() {
           Esther
         </Link>
       </div>
+      <div className="MenuItem">
+        <Link className="Link" to="/exodus">
+          Exodus
+        </Link>
+      </div>
     </div>
   );
 }
