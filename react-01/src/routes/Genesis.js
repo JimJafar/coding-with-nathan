@@ -1,4 +1,4 @@
-import TopMenu from "../components/TopMenu";
+import TopMenu from "./components/TopMenu";
 import "./Genesis.css";
 
 export default function Genesis() {
