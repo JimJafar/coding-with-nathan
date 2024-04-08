@@ -19,6 +19,11 @@ export default function TopMenu() {
           Exodus
         </Link>
       </div>
+      <div className="MenuItem">
+        <Link className="Link" to="/genesis">
+          Genesis
+        </Link>
+      </div>
     </div>
   );
 }
