@@ -24,6 +24,11 @@ export default function TopMenu() {
           Genesis
         </Link>
       </div>
+      <div className="MenuItem">
+        <Link className="Link" to="/psalms">
+          Psalms
+        </Link>
+      </div>
     </div>
   );
 }

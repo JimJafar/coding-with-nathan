@@ -2,6 +2,7 @@ import TopMenu from "../components/TopMenu";
 import "./Exodus.css";
 
 export default function Exodus() {
+  console.log("hello")
   return (
     <div>
       <TopMenu />

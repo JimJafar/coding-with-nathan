@@ -4,6 +4,8 @@ import "./index.css";
 import Root from "./routes/Root";
 import Esther from "./routes/Esther";
 import Exodus from "./routes/Exodus";
+import Genesis from "./routes/Genesis";
+import Psalms from "./routes/Psalms";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
     path: "exodus",
     element: <Exodus />,
   },
+  {
+    path: "genesis",
+    element: <Genesis />,
+  },
+  { 
+    path: "psalms",
+    element: <Psalms />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
